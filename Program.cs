@@ -292,21 +292,39 @@ namespace Session4_Assignment
 
             #region Q16
             // Create a program that asks the user to input three points(x1, y1), (x2,y2), and(x3, y3), and determines whether these points lie on a singlestraight line.
-            Console.WriteLine("enter 3 2d points coordinates :");
-            point[] points = new point[3];
-            for (int x=0; x<3; x++)
+            //Console.WriteLine("enter 3 2d points coordinates :");
+            //point[] points = new point[3];
+            //for (int x=0; x<3; x++)
+            //{
+            //    Console.Write($"x{x+1}= ");
+            //    int xx = int.Parse(Console.ReadLine());
+            //    Console.Write($"Y{x+1}= ");
+            //    int yy = int.Parse(Console.ReadLine());
+            //    points[x] = new point(xx, yy);
+
+            //}
+            //double Area = 0.5 * (points[0].x * (points[1].y - points[2].y) + points[1].x * (points[2].y - points[0].y) + points[2].x * (points[0].y - points[1].y));
+            //if (Area == 0) { Console.WriteLine("three points in same line "); }
+
+
+            #endregion
+
+            #region Q17
+           
+                Console.Write("Enter Worker's Name : ");
+                string name = Console.ReadLine();
+                Console.Write("how many hours / task: ");
+                int hours = int.Parse(Console.ReadLine());
+
+            string result;
+            result = hours switch
             {
-                Console.Write($"x{x+1}= ");
-                int xx = int.Parse(Console.ReadLine());
-                Console.Write($"Y{x+1}= ");
-                int yy = int.Parse(Console.ReadLine());
-                points[x] = new point(xx, yy);
-
-            }
-            double Area = 0.5 * (points[0].x * (points[1].y - points[2].y) + points[1].x * (points[2].y - points[0].y) + points[2].x * (points[0].y - points[1].y));
-            if (Area == 0) { Console.WriteLine("three points in same line "); }
-
-
+                <= 3 and <= 2 => "considered highly efficient.",
+                > 3 and <= 4 => "instructed to increase their speed.",
+                > 4 and <= 5 => "provided with training to\r\nenhance their speed.",
+                > 5 => "required to leave the company."
+            };
+            Console.WriteLine(name+" "+result);
             #endregion
 
         }
