@@ -233,15 +233,60 @@ namespace Session4_Assignment
 
             #region Q14
             //Write a program to allow the user to enter int and print the REVERSED of it.
-            Console.WriteLine("Enter a number: ");
-            int number = int.Parse(Console.ReadLine());
-            int originalNumber = number;
+            //Console.WriteLine("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
+            //int originalNumber = number;
 
-            char[] digits = number.ToString().ToCharArray();
-            Array.Reverse(digits);
-            int reversed = int.Parse(new string(digits));
-          
-            Console.WriteLine($"Reversed number: {reversed}");
+            //char[] digits = number.ToString().ToCharArray();
+            //Array.Reverse(digits);
+            //int reversed = int.Parse(new string(digits));
+
+            //Console.WriteLine($"Reversed number: {reversed}");
+            #endregion
+
+            #region Q15
+            // Write a program in C# Sharp to find prime numbers within a range of numbers.
+            Console.WriteLine("enter start num: ");
+            int start = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter last num: ");
+            int end =int.Parse(Console.ReadLine());
+            bool yes = false;
+            for (int i = start; i <= end; i++)
+            {
+               yes = true;
+
+                if (i <= 1)
+                {
+                    yes = false;
+                }
+                else if (i == 2)
+                {
+                    yes = true;
+                }
+                else if (i % 2 == 0)
+                {
+                    yes = false; 
+                }
+                else
+                {
+                    int limit = (int)Math.Sqrt(i);
+                    for (int y = 3; y <= limit; y += 2)
+                    {
+                        if (i % y == 0)
+                        {
+                            yes = false;
+                            break; 
+                        }
+                    }
+                }
+
+                if (yes)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+
+
             #endregion
 
         }
