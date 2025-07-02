@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Session4_Assignment
 {
@@ -19,23 +20,40 @@ namespace Session4_Assignment
             #region Q2
             //Write a program that allows the user to insert an integer then print
             //negative if it is negative number otherwise print positive.
-            Console.WriteLine("Enter a Num");
-            double num2 = double.Parse(Console.ReadLine());
-            switch (num2)
-            {
-                case > 0:
-                    Console.WriteLine("It is a Positive Number");
-                    break;
-                case < 0:
-                    Console.WriteLine("It is a Negative  Number");
-                    break;
-                default:
-                    Console.WriteLine("It is azero "); break;
+            //Console.WriteLine("Enter a Num");
+            //double num2 = double.Parse(Console.ReadLine());
+            //switch (num2)
+            //{
+            //    case > 0:
+            //        Console.WriteLine("It is a Positive Number");
+            //        break;
+            //    case < 0:
+            //        Console.WriteLine("It is a Negative  Number");
+            //        break;
+            //    default:
+            //        Console.WriteLine("It is azero "); break;
+            //}
+
+
+            #endregion
+
+            #region Q3
+            //Write a program that takes 3 integers from the user then prints the max
+            //element and the min element.
+            double[] array1 =new double[3];
+            double max = 0; double min = 0; 
+            for (int i = 0; i < array1.Length; i++) 
+            { 
+                Console.WriteLine("Enter Num "+(i+1));
+                array1[i] = double.Parse(Console.ReadLine());
+                if (i == 0) { max = min = array1[i]; }
+                if (array1[i] >= max) { max = array1[i]; }
+                else if(array1[i] <= min) { min = array1[i]; }
             }
+            Console.WriteLine("Maximum = "+max);
+            Console.WriteLine("Minmum = " + min);
 
-
-                    #endregion
-
-            }
+            #endregion
+        }
     }
 }
