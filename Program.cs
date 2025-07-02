@@ -107,12 +107,26 @@ namespace Session4_Assignment
 
             #region Q8
             //Write a program that allows to user to insert number then print all even numbers between 1 to this number
+            //Console.WriteLine("enter a num : ");
+            //int num8 = int.Parse(Console.ReadLine());
+            //for (int i = 2; i < num8; i++)
+            //{
+            //    if (i % 2 == 0) { Console.Write(i + " "); }
+            //}
+            #endregion
+
+            #region Q9
+            //Write a program that takes two integers then prints the power.
             Console.WriteLine("enter a num : ");
-            int num8 = int.Parse(Console.ReadLine());
-            for (int i = 2; i < num8; i++)
+            int num9 = int.Parse(Console.ReadLine()); 
+            Console.WriteLine("enter the Power : ");
+            int power = int.Parse(Console.ReadLine());
+            int result = num9;
+            for (int i = 1; i < power; i++) 
             {
-                if (i % 2 == 0) { Console.Write(i + " "); }
+                result *= num9;
             }
+            Console.WriteLine(result);
             #endregion
         }
     }
