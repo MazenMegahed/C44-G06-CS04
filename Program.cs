@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Numerics;
 using System.Security.Cryptography;
@@ -246,49 +247,80 @@ namespace Session4_Assignment
 
             #region Q15
             // Write a program in C# Sharp to find prime numbers within a range of numbers.
-            Console.WriteLine("enter start num: ");
-            int start = int.Parse(Console.ReadLine());
-            Console.WriteLine("enter last num: ");
-            int end =int.Parse(Console.ReadLine());
-            bool yes = false;
-            for (int i = start; i <= end; i++)
+            //Console.WriteLine("enter start num: ");
+            //int start = int.Parse(Console.ReadLine());
+            //Console.WriteLine("enter last num: ");
+            //int end =int.Parse(Console.ReadLine());
+            //bool yes = false;
+            //for (int i = start; i <= end; i++)
+            //{
+            //   yes = true;
+
+            //    if (i <= 1)
+            //    {
+            //        yes = false;
+            //    }
+            //    else if (i == 2)
+            //    {
+            //        yes = true;
+            //    }
+            //    else if (i % 2 == 0)
+            //    {
+            //        yes = false; 
+            //    }
+            //    else
+            //    {
+            //        int limit = (int)Math.Sqrt(i);
+            //        for (int y = 3; y <= limit; y += 2)
+            //        {
+            //            if (i % y == 0)
+            //            {
+            //                yes = false;
+            //                break; 
+            //            }
+            //        }
+            //    }
+
+            //    if (yes)
+            //    {
+            //        Console.Write(i + " ");
+            //    }
+            //}
+
+
+            #endregion
+
+            #region Q16
+            // Create a program that asks the user to input three points(x1, y1), (x2,y2), and(x3, y3), and determines whether these points lie on a singlestraight line.
+            Console.WriteLine("enter 3 2d points coordinates :");
+            point[] points = new point[3];
+            for (int x=0; x<3; x++)
             {
-               yes = true;
+                Console.Write($"x{x+1}= ");
+                int xx = int.Parse(Console.ReadLine());
+                Console.Write($"Y{x+1}= ");
+                int yy = int.Parse(Console.ReadLine());
+                points[x] = new point(xx, yy);
 
-                if (i <= 1)
-                {
-                    yes = false;
-                }
-                else if (i == 2)
-                {
-                    yes = true;
-                }
-                else if (i % 2 == 0)
-                {
-                    yes = false; 
-                }
-                else
-                {
-                    int limit = (int)Math.Sqrt(i);
-                    for (int y = 3; y <= limit; y += 2)
-                    {
-                        if (i % y == 0)
-                        {
-                            yes = false;
-                            break; 
-                        }
-                    }
-                }
-
-                if (yes)
-                {
-                    Console.Write(i + " ");
-                }
             }
+            double Area = 0.5 * (points[0].x * (points[1].y - points[2].y) + points[1].x * (points[2].y - points[0].y) + points[2].x * (points[0].y - points[1].y));
+            if (Area == 0) { Console.WriteLine("three points in same line "); }
 
 
             #endregion
 
         }
+    }
+    class point { 
+        public int x;
+        public int y;
+        public point(int x, int y) 
+        { this.x = x; this.y = y; }
+        public override string ToString()
+        {
+            return $"x= {x} , y={y}";
+        }
+
+    
     }
 }
