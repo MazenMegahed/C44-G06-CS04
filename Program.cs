@@ -97,11 +97,21 @@ namespace Session4_Assignment
 
             #region Q7
             //Write a program that allows the user to insert an integer then print a multiplication table up to 12.
+            //Console.WriteLine("enter a num : ");
+            //int num7 = int.Parse(Console.ReadLine());   
+            //for(int x = 1; x <= 12; x++)
+            //{
+            //    Console.Write(num7 * x + " ");
+            //}
+            #endregion
+
+            #region Q8
+            //Write a program that allows to user to insert number then print all even numbers between 1 to this number
             Console.WriteLine("enter a num : ");
-            int num7 = int.Parse(Console.ReadLine());   
-            for(int x = 1; x <= 12; x++)
+            int num8 = int.Parse(Console.ReadLine());
+            for (int i = 2; i < num8; i++)
             {
-                Console.Write(num7 * x + " ");
+                if (i % 2 == 0) { Console.Write(i + " "); }
             }
             #endregion
         }
