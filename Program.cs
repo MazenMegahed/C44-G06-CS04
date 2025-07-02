@@ -217,19 +217,33 @@ namespace Session4_Assignment
 
             #region Q13
             //Write a program to allow the user to enter a string and print the REVERSE of it.
-            Console.WriteLine("enter a text ");
-            string original = Console.ReadLine();
-            char[] oldletters = new char[original.Length];
-            char[] newletters = new char[original.Length];
-            oldletters = original.ToArray();
-            for(int i = 0; i < original.Length; i++)
-            {
-                newletters[original.Length - i - 1]=oldletters[i];
-            }
-            string newreversed = new string(newletters);
-            Console.WriteLine(newreversed);
+            //Console.WriteLine("enter a text ");
+            //string original = Console.ReadLine();
+            //char[] oldletters = new char[original.Length];
+            //char[] newletters = new char[original.Length];
+            //oldletters = original.ToArray();
+            //for(int i = 0; i < original.Length; i++)
+            //{
+            //    newletters[original.Length - i - 1]=oldletters[i];
+            //}
+            //string newreversed = new string(newletters);
+            //Console.WriteLine(newreversed);
 
             #endregion
+
+            #region Q14
+            //Write a program to allow the user to enter int and print the REVERSED of it.
+            Console.WriteLine("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            int originalNumber = number;
+
+            char[] digits = number.ToString().ToCharArray();
+            Array.Reverse(digits);
+            int reversed = int.Parse(new string(digits));
+          
+            Console.WriteLine($"Reversed number: {reversed}");
+            #endregion
+
         }
     }
 }
