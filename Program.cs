@@ -165,55 +165,71 @@ namespace Session4_Assignment
             #endregion
 
             #region Q12
-           
-                Console.Write("Enter number 1: ");
-                double num1 = double.Parse(Console.ReadLine());
 
-                Console.Write("Enter an operator (+, -, *, /): ");
-                char op = char.Parse(Console.ReadLine());
+            //Console.Write("Enter number 1: ");
+            //double num1 = double.Parse(Console.ReadLine());
 
-                Console.Write("Enter number 2: ");
-                double num2 = double.Parse(Console.ReadLine());
+            //Console.Write("Enter an operator (+, -, *, /): ");
+            //char op = char.Parse(Console.ReadLine());
 
-                double result;
+            //Console.Write("Enter number 2: ");
+            //double num2 = double.Parse(Console.ReadLine());
 
-                switch (op)
-                {
-                    case '+':
-                        result = num1 + num2;
-                        Console.WriteLine($"Result: {num1} + {num2} = {result}");
-                        break;
+            //double result;
 
-                    case '-':
-                        result = num1 - num2;
-                        Console.WriteLine($"Result: {num1} - {num2} = {result}");
-                        break;
+            //switch (op)
+            //{
+            //    case '+':
+            //        result = num1 + num2;
+            //        Console.WriteLine($"Result: {num1} + {num2} = {result}");
+            //        break;
 
-                    case '*':
-                        result = num1 * num2;
-                        Console.WriteLine($"Result: {num1} * {num2} = {result}");
-                        break;
+            //    case '-':
+            //        result = num1 - num2;
+            //        Console.WriteLine($"Result: {num1} - {num2} = {result}");
+            //        break;
 
-                    case '/':
-                        if (num2 == 0)
-                        {
-                            Console.WriteLine("Error: Cannot divide by zero.");
-                        }
-                        else
-                        {
-                            result = num1 / num2;
-                            Console.WriteLine($"Result: {num1} / {num2} = {result}");
-                        }
-                        break;
+            //    case '*':
+            //        result = num1 * num2;
+            //        Console.WriteLine($"Result: {num1} * {num2} = {result}");
+            //        break;
 
-                    default:
-                        Console.WriteLine("Invalid operator.");
-                        break;
-                }
-          
-       
+            //    case '/':
+            //        if (num2 == 0)
+            //        {
+            //            Console.WriteLine("Error: Cannot divide by zero.");
+            //        }
+            //        else
+            //        {
+            //            result = num1 / num2;
+            //            Console.WriteLine($"Result: {num1} / {num2} = {result}");
+            //        }
+            //        break;
 
-        #endregion
+            //    default:
+            //        Console.WriteLine("Invalid operator.");
+            //        break;
+            //}
+
+
+
+            #endregion
+
+            #region Q13
+            //Write a program to allow the user to enter a string and print the REVERSE of it.
+            Console.WriteLine("enter a text ");
+            string original = Console.ReadLine();
+            char[] oldletters = new char[original.Length];
+            char[] newletters = new char[original.Length];
+            oldletters = original.ToArray();
+            for(int i = 0; i < original.Length; i++)
+            {
+                newletters[original.Length - i - 1]=oldletters[i];
+            }
+            string newreversed = new string(newletters);
+            Console.WriteLine(newreversed);
+
+            #endregion
+        }
     }
-}
 }
