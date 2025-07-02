@@ -87,11 +87,21 @@ namespace Session4_Assignment
 
             #region Q6
             // Write a program that allows the user to insert an integer then print all numbers between 1 to that number.
-            Console.WriteLine("enter a positive num :");
-            int target = int.Parse(Console.ReadLine());
-            for (int i = 2; i < target; i++) 
+            //Console.WriteLine("enter a positive num :");
+            //int target = int.Parse(Console.ReadLine());
+            //for (int i = 2; i < target; i++) 
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+
+            #region Q7
+            //Write a program that allows the user to insert an integer then print a multiplication table up to 12.
+            Console.WriteLine("enter a num : ");
+            int num7 = int.Parse(Console.ReadLine());   
+            for(int x = 1; x <= 12; x++)
             {
-                Console.WriteLine(i);
+                Console.Write(num7 * x + " ");
             }
             #endregion
         }
