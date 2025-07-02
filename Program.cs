@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Numerics;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -73,16 +74,25 @@ namespace Session4_Assignment
 
             #endregion
 
-
             #region Q5
             //Write a program that takes character from the user then if it is a vowel
             //chars(a, e, I, o, u) then print(vowel) otherwise print(consonant).
-            char[] vowel = new Char[] { 'a', 'e', 'i', 'o', 'u' };
-            Console.WriteLine("Enter a letter");
-            char c = char.Parse(Console.ReadLine());
-            if (vowel.Contains(c)) { Console.WriteLine("vowel"); }
-            else { Console.WriteLine("consonant"); }
+            //char[] vowel = new Char[] { 'a', 'e', 'i', 'o', 'u' };
+            //Console.WriteLine("Enter a letter");
+            //char c = char.Parse(Console.ReadLine());
+            //if (vowel.Contains(c)) { Console.WriteLine("vowel"); }
+            //else { Console.WriteLine("consonant"); }
 
+            #endregion
+
+            #region Q6
+            // Write a program that allows the user to insert an integer then print all numbers between 1 to that number.
+            Console.WriteLine("enter a positive num :");
+            int target = int.Parse(Console.ReadLine());
+            for (int i = 2; i < target; i++) 
+            {
+                Console.WriteLine(i);
+            }
             #endregion
         }
     }
