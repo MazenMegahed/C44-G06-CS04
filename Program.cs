@@ -117,16 +117,36 @@ namespace Session4_Assignment
 
             #region Q9
             //Write a program that takes two integers then prints the power.
-            Console.WriteLine("enter a num : ");
-            int num9 = int.Parse(Console.ReadLine()); 
-            Console.WriteLine("enter the Power : ");
-            int power = int.Parse(Console.ReadLine());
-            int result = num9;
-            for (int i = 1; i < power; i++) 
-            {
-                result *= num9;
-            }
-            Console.WriteLine(result);
+            //Console.WriteLine("enter a num : ");
+            //int num9 = int.Parse(Console.ReadLine()); 
+            //Console.WriteLine("enter the Power : ");
+            //int power = int.Parse(Console.ReadLine());
+            //int result = num9;
+            //for (int i = 1; i < power; i++) 
+            //{
+            //    result *= num9;
+            //}
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q10
+            //Write a program to enter marks of five subjects and calculate total, average and percentage.
+            
+            Console.WriteLine("Enter 5 nums : ");
+            int n1=int.Parse(Console.ReadLine());
+            int result = n1;
+            int n2 = int.Parse(Console.ReadLine());
+            result += n2;
+            int n3 = int.Parse(Console.ReadLine());
+            result += n3;
+            int n4 = int.Parse(Console.ReadLine());
+            result += n4;
+            int n5 = int.Parse(Console.ReadLine());
+            result += n5;
+            int Total = result;
+            int avg = Total / 5;
+            double percentage = (Total / (5 * 100.0)) * 100;
+            Console.WriteLine($"total : {Total} , and Avg : {avg} , and percentage = {percentage}");
             #endregion
         }
     }
