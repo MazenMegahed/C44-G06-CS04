@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Reflection.Metadata;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -60,16 +61,27 @@ namespace Session4_Assignment
 
             #region Q4
             // Write a program that allows the user to insert an integer number then check If a number is even or odd.
-            Console.WriteLine("Enter a Num");
-            int num4=int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a Num");
+            //int num4=int.Parse(Console.ReadLine());
 
 
-            string result = (num4%2 ==0) switch
-            {
-                true => "It is an Even Num",
-                false => "It is an Odd Num"
-            };
-            Console.WriteLine(result);
+            //string result = (num4%2 ==0) switch
+            //{
+            //    true => "It is an Even Num",
+            //    false => "It is an Odd Num"
+            //};
+            //Console.WriteLine(result);
+
+            #endregion
+
+            #region Q5
+            //Write a program that takes character from the user then if it is a vowel
+            //chars(a, e, I, o, u) then print(vowel) otherwise print(consonant).
+            char[] vowel = new Char[] { 'a', 'e', 'i', 'o', 'u' };
+            Console.WriteLine("Enter a letter");
+            char c = char.Parse(Console.ReadLine());
+            if (vowel.Contains(c)) { Console.WriteLine("vowel"); }
+            else { Console.WriteLine("consonant"); }
 
             #endregion
         }
