@@ -131,7 +131,7 @@ namespace Session4_Assignment
 
             #region Q10
             //Write a program to enter marks of five subjects and calculate total, average and percentage.
-            
+
             //Console.WriteLine("Enter 5 nums : ");
             //int n1=int.Parse(Console.ReadLine());
             //int result = n1;
@@ -151,18 +151,69 @@ namespace Session4_Assignment
 
             #region Q11
             //  Write a program to input the month number and print the number of days in that month.
-            Console.WriteLine("enter a Month num : ");
-            int monthnum = int.Parse(Console.ReadLine());
+            //Console.WriteLine("enter a Month num : ");
+            //int monthnum = int.Parse(Console.ReadLine());
 
-            int daycount = monthnum switch
-            {
-                1 or 3 or 5 or 7  or 8 or 10 or 12 => 31,
-                2=>28,
-                _=>30
-                
-            };
-            Console.WriteLine("total day counter = " + daycount);
+            //int daycount = monthnum switch
+            //{
+            //    1 or 3 or 5 or 7  or 8 or 10 or 12 => 31,
+            //    2=>28,
+            //    _=>30
+
+            //};
+            //Console.WriteLine("total day counter = " + daycount);
             #endregion
-        }
+
+            #region Q12
+           
+                Console.Write("Enter number 1: ");
+                double num1 = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter an operator (+, -, *, /): ");
+                char op = char.Parse(Console.ReadLine());
+
+                Console.Write("Enter number 2: ");
+                double num2 = double.Parse(Console.ReadLine());
+
+                double result;
+
+                switch (op)
+                {
+                    case '+':
+                        result = num1 + num2;
+                        Console.WriteLine($"Result: {num1} + {num2} = {result}");
+                        break;
+
+                    case '-':
+                        result = num1 - num2;
+                        Console.WriteLine($"Result: {num1} - {num2} = {result}");
+                        break;
+
+                    case '*':
+                        result = num1 * num2;
+                        Console.WriteLine($"Result: {num1} * {num2} = {result}");
+                        break;
+
+                    case '/':
+                        if (num2 == 0)
+                        {
+                            Console.WriteLine("Error: Cannot divide by zero.");
+                        }
+                        else
+                        {
+                            result = num1 / num2;
+                            Console.WriteLine($"Result: {num1} / {num2} = {result}");
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid operator.");
+                        break;
+                }
+          
+       
+
+        #endregion
     }
+}
 }
