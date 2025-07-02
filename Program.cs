@@ -1,10 +1,344 @@
-﻿namespace Session4_Assignment
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Numerics;
+using System.Security.Cryptography;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Session4_Assignment
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Q1
+            // Write a program that takes a number from the user then print yes if that
+            //number can be divided by 3 and 4 otherwise print no.
+            //Console.WriteLine("Enter A num ");
+            //int num1 = int.Parse(Console.ReadLine());
+            //if (num1 % 3 == 0 && num1 % 4 == 0)
+            //{ Console.WriteLine("Yes"); }
+            //else { Console.WriteLine("no"); }
+            #endregion
+
+            #region Q2
+            //Write a program that allows the user to insert an integer then print
+            //negative if it is negative number otherwise print positive.
+            //Console.WriteLine("Enter a Num");
+            //double num2 = double.Parse(Console.ReadLine());
+            //switch (num2)
+            //{
+            //    case > 0:
+            //        Console.WriteLine("It is a Positive Number");
+            //        break;
+            //    case < 0:
+            //        Console.WriteLine("It is a Negative  Number");
+            //        break;
+            //    default:
+            //        Console.WriteLine("It is azero "); break;
+            //}
+
+
+            #endregion
+
+            #region Q3
+            //Write a program that takes 3 integers from the user then prints the max
+            //element and the min element.
+            //double[] array1 =new double[3];
+            //double max = 0; double min = 0; 
+            //for (int i = 0; i < array1.Length; i++) 
+            //{ 
+            //    Console.WriteLine("Enter Num "+(i+1));
+            //    array1[i] = double.Parse(Console.ReadLine());
+            //    if (i == 0) { max = min = array1[i]; }
+            //    if (array1[i] >= max) { max = array1[i]; }
+            //    else if(array1[i] <= min) { min = array1[i]; }
+            //}
+            //Console.WriteLine("Maximum = "+max);
+            //Console.WriteLine("Minmum = " + min);
+
+            #endregion
+
+            #region Q4
+            // Write a program that allows the user to insert an integer number then check If a number is even or odd.
+            //Console.WriteLine("Enter a Num");
+            //int num4=int.Parse(Console.ReadLine());
+
+
+            //string result = (num4%2 ==0) switch
+            //{
+            //    true => "It is an Even Num",
+            //    false => "It is an Odd Num"
+            //};
+            //Console.WriteLine(result);
+
+            #endregion
+
+            #region Q5
+            //Write a program that takes character from the user then if it is a vowel
+            //chars(a, e, I, o, u) then print(vowel) otherwise print(consonant).
+            //char[] vowel = new Char[] { 'a', 'e', 'i', 'o', 'u' };
+            //Console.WriteLine("Enter a letter");
+            //char c = char.Parse(Console.ReadLine());
+            //if (vowel.Contains(c)) { Console.WriteLine("vowel"); }
+            //else { Console.WriteLine("consonant"); }
+
+            #endregion
+
+            #region Q6
+            // Write a program that allows the user to insert an integer then print all numbers between 1 to that number.
+            //Console.WriteLine("enter a positive num :");
+            //int target = int.Parse(Console.ReadLine());
+            //for (int i = 2; i < target; i++) 
+            //{
+            //    Console.WriteLine(i);
+            //}
+            #endregion
+
+            #region Q7
+            //Write a program that allows the user to insert an integer then print a multiplication table up to 12.
+            //Console.WriteLine("enter a num : ");
+            //int num7 = int.Parse(Console.ReadLine());   
+            //for(int x = 1; x <= 12; x++)
+            //{
+            //    Console.Write(num7 * x + " ");
+            //}
+            #endregion
+
+            #region Q8
+            //Write a program that allows to user to insert number then print all even numbers between 1 to this number
+            //Console.WriteLine("enter a num : ");
+            //int num8 = int.Parse(Console.ReadLine());
+            //for (int i = 2; i < num8; i++)
+            //{
+            //    if (i % 2 == 0) { Console.Write(i + " "); }
+            //}
+            #endregion
+
+            #region Q9
+            //Write a program that takes two integers then prints the power.
+            //Console.WriteLine("enter a num : ");
+            //int num9 = int.Parse(Console.ReadLine()); 
+            //Console.WriteLine("enter the Power : ");
+            //int power = int.Parse(Console.ReadLine());
+            //int result = num9;
+            //for (int i = 1; i < power; i++) 
+            //{
+            //    result *= num9;
+            //}
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q10
+            //Write a program to enter marks of five subjects and calculate total, average and percentage.
+
+            //Console.WriteLine("Enter 5 nums : ");
+            //int n1=int.Parse(Console.ReadLine());
+            //int result = n1;
+            //int n2 = int.Parse(Console.ReadLine());
+            //result += n2;
+            //int n3 = int.Parse(Console.ReadLine());
+            //result += n3;
+            //int n4 = int.Parse(Console.ReadLine());
+            //result += n4;
+            //int n5 = int.Parse(Console.ReadLine());
+            //result += n5;
+            //int Total = result;
+            //int avg = Total / 5;
+            //double percentage = (Total / (5 * 100.0)) * 100;
+            //Console.WriteLine($"total : {Total} , and Avg : {avg} , and percentage = {percentage}");
+            #endregion
+
+            #region Q11
+            //  Write a program to input the month number and print the number of days in that month.
+            //Console.WriteLine("enter a Month num : ");
+            //int monthnum = int.Parse(Console.ReadLine());
+
+            //int daycount = monthnum switch
+            //{
+            //    1 or 3 or 5 or 7  or 8 or 10 or 12 => 31,
+            //    2=>28,
+            //    _=>30
+
+            //};
+            //Console.WriteLine("total day counter = " + daycount);
+            #endregion
+
+            #region Q12
+
+            //Console.Write("Enter number 1: ");
+            //double num1 = double.Parse(Console.ReadLine());
+
+            //Console.Write("Enter an operator (+, -, *, /): ");
+            //char op = char.Parse(Console.ReadLine());
+
+            //Console.Write("Enter number 2: ");
+            //double num2 = double.Parse(Console.ReadLine());
+
+            //double result;
+
+            //switch (op)
+            //{
+            //    case '+':
+            //        result = num1 + num2;
+            //        Console.WriteLine($"Result: {num1} + {num2} = {result}");
+            //        break;
+
+            //    case '-':
+            //        result = num1 - num2;
+            //        Console.WriteLine($"Result: {num1} - {num2} = {result}");
+            //        break;
+
+            //    case '*':
+            //        result = num1 * num2;
+            //        Console.WriteLine($"Result: {num1} * {num2} = {result}");
+            //        break;
+
+            //    case '/':
+            //        if (num2 == 0)
+            //        {
+            //            Console.WriteLine("Error: Cannot divide by zero.");
+            //        }
+            //        else
+            //        {
+            //            result = num1 / num2;
+            //            Console.WriteLine($"Result: {num1} / {num2} = {result}");
+            //        }
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Invalid operator.");
+            //        break;
+            //}
+
+
+
+            #endregion
+
+            #region Q13
+            //Write a program to allow the user to enter a string and print the REVERSE of it.
+            //Console.WriteLine("enter a text ");
+            //string original = Console.ReadLine();
+            //char[] oldletters = new char[original.Length];
+            //char[] newletters = new char[original.Length];
+            //oldletters = original.ToArray();
+            //for(int i = 0; i < original.Length; i++)
+            //{
+            //    newletters[original.Length - i - 1]=oldletters[i];
+            //}
+            //string newreversed = new string(newletters);
+            //Console.WriteLine(newreversed);
+
+            #endregion
+
+            #region Q14
+            //Write a program to allow the user to enter int and print the REVERSED of it.
+            //Console.WriteLine("Enter a number: ");
+            //int number = int.Parse(Console.ReadLine());
+            //int originalNumber = number;
+
+            //char[] digits = number.ToString().ToCharArray();
+            //Array.Reverse(digits);
+            //int reversed = int.Parse(new string(digits));
+
+            //Console.WriteLine($"Reversed number: {reversed}");
+            #endregion
+
+            #region Q15
+            // Write a program in C# Sharp to find prime numbers within a range of numbers.
+            //Console.WriteLine("enter start num: ");
+            //int start = int.Parse(Console.ReadLine());
+            //Console.WriteLine("enter last num: ");
+            //int end =int.Parse(Console.ReadLine());
+            //bool yes = false;
+            //for (int i = start; i <= end; i++)
+            //{
+            //   yes = true;
+
+            //    if (i <= 1)
+            //    {
+            //        yes = false;
+            //    }
+            //    else if (i == 2)
+            //    {
+            //        yes = true;
+            //    }
+            //    else if (i % 2 == 0)
+            //    {
+            //        yes = false; 
+            //    }
+            //    else
+            //    {
+            //        int limit = (int)Math.Sqrt(i);
+            //        for (int y = 3; y <= limit; y += 2)
+            //        {
+            //            if (i % y == 0)
+            //            {
+            //                yes = false;
+            //                break; 
+            //            }
+            //        }
+            //    }
+
+            //    if (yes)
+            //    {
+            //        Console.Write(i + " ");
+            //    }
+            //}
+
+
+            #endregion
+
+            #region Q16
+            // Create a program that asks the user to input three points(x1, y1), (x2,y2), and(x3, y3), and determines whether these points lie on a singlestraight line.
+            //Console.WriteLine("enter 3 2d points coordinates :");
+            //point[] points = new point[3];
+            //for (int x=0; x<3; x++)
+            //{
+            //    Console.Write($"x{x+1}= ");
+            //    int xx = int.Parse(Console.ReadLine());
+            //    Console.Write($"Y{x+1}= ");
+            //    int yy = int.Parse(Console.ReadLine());
+            //    points[x] = new point(xx, yy);
+
+            //}
+            //double Area = 0.5 * (points[0].x * (points[1].y - points[2].y) + points[1].x * (points[2].y - points[0].y) + points[2].x * (points[0].y - points[1].y));
+            //if (Area == 0) { Console.WriteLine("three points in same line "); }
+
+
+            #endregion
+
+            #region Q17
+           
+                Console.Write("Enter Worker's Name : ");
+                string name = Console.ReadLine();
+                Console.Write("how many hours / task: ");
+                int hours = int.Parse(Console.ReadLine());
+
+            string result;
+            result = hours switch
+            {
+                <= 3 and <= 2 => "considered highly efficient.",
+                > 3 and <= 4 => "instructed to increase their speed.",
+                > 4 and <= 5 => "provided with training to\r\nenhance their speed.",
+                > 5 => "required to leave the company."
+            };
+            Console.WriteLine(name+" "+result);
+            #endregion
+
         }
+    }
+    class point { 
+        public int x;
+        public int y;
+        public point(int x, int y) 
+        { this.x = x; this.y = y; }
+        public override string ToString()
+        {
+            return $"x= {x} , y={y}";
+        }
+
+    
     }
 }
